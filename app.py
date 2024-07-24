@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import torch
 import torch.nn as nn
 from typing import List
+from textblob import TextBlob
 
 # Define the Neural Network
 class SimpleNN(nn.Module):
