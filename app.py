@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import torch
 import torch.nn as nn
 from typing import List
+import emoji
 
 # Define the Neural Network
 class SimpleNN(nn.Module):
@@ -32,6 +33,11 @@ model = load_model('simple_nn_checkpoint.pth')
 def hello():
     print("Hello sample 6")
     return "Hello sample 6"  # Return a response
+
+@app.route('/emoji')
+def helloWorld():
+    print("Hello sample 6 in emoji lol.")
+    return emoji.emojize("Hello, World! :earth_americas:")
 
 @app.route('/predict', methods=['POST'])
 def predict():
