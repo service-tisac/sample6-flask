@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import torch
 import torch.nn as nn
 from typing import List
+from textblob import TextBlob
 
 # Define the Neural Network
 class SimpleNN(nn.Module):
@@ -32,6 +33,14 @@ model = load_model('simple_nn_checkpoint.pth')
 def hello():
     print("Hello sample 6")
     return "Hello sample 6"  # Return a response
+
+@app.route('/emoji')
+def helloWorld():
+    text = "TextBlob is working correctly!"
+    blob = TextBlob(text)
+    print(f"Original: {text}")
+    print(f"Sentiment: {blob.sentiment}")
+    return "Ok"
 
 @app.route('/predict', methods=['POST'])
 def predict():
