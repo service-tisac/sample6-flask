@@ -28,6 +28,10 @@ app = Flask(__name__)
 # Load the model checkpoint
 model = load_model('simple_nn_checkpoint.pth')
 
+@app.route('/')
+def hello():
+    print("Hello sample 6")
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
