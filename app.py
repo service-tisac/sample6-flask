@@ -31,6 +31,7 @@ model = load_model('simple_nn_checkpoint.pth')
 @app.route('/')
 def hello():
     print("Hello sample 6")
+    return "Hello sample 6"  # Return a response
 
 @app.route('/predict', methods=['POST'])
 def predict():
