@@ -22,6 +22,3 @@ def test_textblob():
         return jsonify(response)  # Return JSON response
     except Exception as e:
         return jsonify({"error": str(e)}), 500  # Return error response
-
-if __name__ == "__main__":
-    app.run(debug=True)  # Run the app with debugging enabled
