@@ -45,6 +45,3 @@ def predict():
         output = model(input_tensor)
     
     return jsonify({"output": output.squeeze().item()})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8888)
