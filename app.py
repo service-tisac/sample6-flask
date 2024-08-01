@@ -54,7 +54,7 @@ def memory_intensive():
         start_time = time.time()  # Start timing
 
         # Create a large array to simulate high memory usage
-        size = 10**7  # Adjust size as needed for testing
+        size = 10**10  # Adjust size as needed for testing
         large_array = np.zeros(size)
 
         end_time = time.time()  # End timing
