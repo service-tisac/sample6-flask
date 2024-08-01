@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from textblob import TextBlob
 import time
+import numpy as np
 
 app = Flask(__name__)  # Initialize Flask app
 
