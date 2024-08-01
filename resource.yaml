@@ -5,8 +5,8 @@ x-resource-limits: &resource-limits
     resources:
       limits:
         cpus: '0.50'
-        memory: 512M
-        memoryswap: 768M  # Memory swap should be greater than memory limit
+        memory: 1M
+        memoryswap: 2M  # Memory swap should be greater than memory limit
       reservations:
         cpus: '0.25'
-        memory: 256M
+        memory: 5M
