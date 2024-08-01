@@ -36,7 +36,7 @@ def heavy_computation():
         
         # Example of a large Fibonacci number calculation
         start_time = time.time()
-        result = fibonacci(50)  # Change this number to make it more intensive
+        result = fibonacci(30)  # Change this number to make it more intensive
         end_time = time.time()
         
         response = {
