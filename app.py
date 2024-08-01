@@ -24,7 +24,7 @@ def test_textblob():
     except Exception as e:
         return jsonify({"error": str(e)}), 500  # Return error response
 
-@app.route("/test/heavy", methods=["GET"])
+@app.route("/test/cpu", methods=["GET"])
 def heavy_computation():
     try:
         # Perform a CPU-intensive task
@@ -44,6 +44,26 @@ def heavy_computation():
             "computation_time": end_time - start_time
         }
         return jsonify(response)  # Return JSON response
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500  # Return error response
+        
+@app.route("/test/memory", methods=["GET"])
+def memory_intensive():
+    try:
+        start_time = time.time()  # Start timing
+
+        # Create a large array to simulate high memory usage
+        size = 10**7  # Adjust size as needed for testing
+        large_array = np.zeros(size)
+
+        end_time = time.time()  # End timing
+        compute_time = end_time - start_time
+
+        result = {
+            "message": "Memory intensive task completed successfully!",
+            "compute_time_seconds": compute_time
+        }
+        return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500  # Return error response
 
