@@ -1,12 +1,12 @@
-version: '3.8'
+# version: '3.8'
 
-x-resource-limits: &resource-limits
-  deploy:
-    resources:
-      limits:
-        cpus: '0.50'
-        memory: 512M
-        memoryswap: 768M  # Memory swap should be greater than memory limit
-      reservations:
-        cpus: '0.25'
-        memory: 256M
+# x-resource-limits: &resource-limits
+#   deploy:
+#     resources:
+#       limits:
+#         cpus: '0.50'
+#         memory: 512M
+#         memoryswap: 768M  # Memory swap should be greater than memory limit
+#       reservations:
+#         cpus: '0.25'
+#         memory: 256M
